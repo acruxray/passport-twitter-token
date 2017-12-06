@@ -84,11 +84,12 @@ module.exports = {
 };
 ```
 
-Execute a request (GET or POST) to created route with the following data:
+**GET** request need to have `access_token`, `access_token_secret` and `user_id` in either the query string or set as a header:
 
 ```
-GET /auth/twitter/token?oauth_token=<TOKEN>&oauth_token_secret=<TOKEN_SECRET>&user_id=<USER_ID>
+GET /auth/twitter/token?access_token=<TOKEN>&access_token_secret=<TOKEN_SECRET>&user_id=<USER_ID>
 ```
+If a **POST** is being preformed they can also be included in the body of the request.
 
 ### Performing Twitter Reverse Auth Step 1 Server-Side
 
